@@ -1,8 +1,8 @@
-import './App.css';
-import './index.css';
-import Home from './pages/Home';
+import "./App.css";
+import "./index.css";
+import Home from "./pages/Home";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
-            
           </Route>
         </Routes>
       </BrowserRouter>

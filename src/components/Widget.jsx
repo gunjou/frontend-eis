@@ -1,27 +1,98 @@
+/* eslint-disable jsx-a11y/alt-text */
 
+const Widget = ({ type }) => {
+  let data;
 
-const Widget = () => {
-	return (
-		<div className="widget ml-2 mb-3">
-					
-			<div className="card p-4 flex rounded border border-white bg-white  drop-shadow-xl">
+  // temporary
+  const value = [59, 89, 76, 50, 2, 3, 12, 6, 19, 21];
 
-				<div className="left ">
-					<div className="title font-bold text-sm text-left">Pasien Rawat Jalan</div>
-					<div className="counter text-left text-4xl p-2">
-						232
-					</div>
-					<div className="detail text-left text-xs">detail</div>
-				</div>
-				<div className="right">
-				<img src={process.env.PUBLIC_URL + "images/icon-pasien-rawat-inap.png"} alt="pasien rawat inap" className="h-16 w-16" />
-				</div>
-			</div>
-		</div>
-	)
-}
+  switch (type) {
+    case "rawat-jalan":
+      data = {
+        img: "images/icon-pasien-rawat-jalan.png",
+        title: "Pasien Rawat Jalan",
+        value: value[0],
+      };
+      break;
+    case "igd":
+      data = {
+        img: "images/icon-pasien-emergency.png",
+        title: "Pasien IGD",
+        value: value[1],
+      };
+      break;
+    case "rawat-inap":
+      data = {
+        img: "images/icon-pasien-rawat-inap.png",
+        title: "Pasien Rawat Inap",
+        value: value[2],
+      };
+      break;
+    case "radiologi":
+      data = {
+        img: "images/icon-radiologi.png",
+        title: "Pasien Radiologi",
+        value: value[3],
+      };
+      break;
+    case "laboratorium":
+      data = {
+        img: "images/icon-laboratorium.png",
+        title: "Pasien Laboratorium",
+        value: value[4],
+      };
+      break;
+    case "rehabilitasi":
+      data = {
+        img: "images/icon-pasien.png",
+        title: "Pasien Rehabilitasi Medik",
+        value: value[5],
+      };
+      break;
+    case "bedah":
+      data = {
+        img: "images/icon-bedah.png",
+        title: "Pasien Bedah",
+        value: value[6],
+      };
+      break;
+    case "farmasi":
+      data = {
+        img: "images/icon-farmasi.png",
+        title: "Pasien Farmasi",
+        value: value[7],
+      };
+      break;
+    default:
+      break;
+  }
 
-export default Widget
+  return (
+    <div className="widget ml-5 mb-3 w-[270px]">
+      <div className="card p-3 rounded border border-white bg-white drop-shadow-xl">
+        <div className="left flex flex-col">
+          <div className="title w-48 font-bold text-sm text-left">
+            {data.title}
+          </div>
+          <div className="right flex flex-row">
+            <div className="counter grow text-left text-4xl p-2">
+              {data.value}
+            </div>
+            <div className="text-right">
+              <img
+                src={process.env.PUBLIC_URL + data.img}
+                className="h-17 w-17"
+              />
+            </div>
+          </div>
+          <div className="detail text-left text-xs">detail</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Widget;
 
 // const Widget = () => {
 //   return (
@@ -66,8 +137,7 @@ export default Widget
 // 				</div>
 // 				</div>
 // </div>
-			
-			
+
 //     </div>
 //   )
 // }
