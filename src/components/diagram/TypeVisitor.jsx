@@ -1,4 +1,4 @@
-import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data01 = [
   { name: 'Group A', value: 400, fill: '#57c028'},
@@ -44,7 +44,7 @@ const TypeVisitor = () => {
                 <text
                   x={x}
                   y={y}
-                  fill="#000"
+                  fill="#616161"
                   textAnchor={x > cx ? "start" : "end"}
                   dominantBaseline="central"
                 >

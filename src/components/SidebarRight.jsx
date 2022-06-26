@@ -1,8 +1,8 @@
 import PersonIcon from '@mui/icons-material/Person';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-const Navbar = () => {
+const SidebarRight = () => {
   return (
     <div className="ml-auto p-3">
       <ul>
@@ -17,4 +17,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default SidebarRight;

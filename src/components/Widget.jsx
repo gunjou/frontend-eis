@@ -70,7 +70,7 @@ const Widget = ({ type }) => {
   return (
     <div className="widget ml-5 mb-3 w-[270px]">
       <div className="card p-3 rounded border border-white bg-white drop-shadow-xl">
-        <div className="left flex flex-col">
+        <div className="left flex flex-col text-gray-700">
           <div className="title w-48 font-bold text-sm text-left">
             {data.title}
           </div>

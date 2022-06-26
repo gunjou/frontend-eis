@@ -6,12 +6,12 @@ import InventoryIcon from '@mui/icons-material/Inventory';
 import FilePresentIcon from '@mui/icons-material/FilePresent';
 import RequestPageIcon from '@mui/icons-material/RequestPage';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+// import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 
 // #00A63C, #009D82, #0093CE, #009D22, #007400
-const Sidebar = () => {
+const SidebarLeft = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar-left">
         <div className="header p-3">
             <div className="logo w-48 pb-3">
                 <img src={process.env.PUBLIC_URL + "images/logo.svg"} alt="Jasamedika" />
@@ -21,7 +21,7 @@ const Sidebar = () => {
               {/* <ArrowLeftIcon className='float-right flex-1' style={"margin-top: -5;"}/> */}
 
             </div>
-            <div className="items">
+            <div className="items text-gray-700">
               <ul>
                 <li className="flex item-center p-2 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
                   <DashboardIcon className='text-sm' />
@@ -54,4 +54,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default SidebarLeft
