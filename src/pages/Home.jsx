@@ -1,5 +1,3 @@
-import SidebarLeft from "../components/SidebarLeft";
-import SidebarRight from "../components/SidebarRight";
 import Filter from "../components/Filter";
 import Widget from "../components/Widget";
 import Card from "../components/Card";
@@ -21,11 +19,9 @@ const date = moment(
 const Home = () => {
   return (
     <div className="home flex">
-      {/* Sidebar-Left */}
-      <SidebarLeft />
 
       {/* Contents */}
-      <div className="flex-1 m-3 rounded bg-[#04ac49]/10 rounded">
+      <div className="flex-1 m-3 rounded bg-[#04ac49]/10 rounded mr-16">
         {/* Title */}
         <div className="title text-left ml-5 p-3 text-gray-700 flex">
           <div className="title flex-1">
@@ -127,8 +123,6 @@ const Home = () => {
         <br />
       </div>
 
-      {/* Sidebar-Right */}
-      <SidebarRight />
     </div>
   );
 };

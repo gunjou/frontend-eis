@@ -4,7 +4,7 @@ import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 
 const SidebarRight = () => {
   return (
-    <div className="ml-auto p-3">
+    <div className="absolute top-0 right-0 h-16 w-16 p-3">
       <ul>
         <li className="flex item-center p-2 mb-4 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
           <PersonIcon className='text-sm' />
