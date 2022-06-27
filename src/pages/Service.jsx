@@ -1,7 +1,9 @@
 import Filter from "../components/Filter";
 import moment from "moment";
 import Card from "../components/Card";
-import BarTrendVisitor from "../components/diagram/BarTrendVisitor";
+import BarTrendVisitor from "../components/diagram/service/BarTrendVisitor";
+import PatientPopulation from "../components/diagram/service/PatientPopulation";
+import InpatientDistribution from "../components/diagram/service/InpatientDistribution";
 
 // Method return date
 const current = new Date();
@@ -46,7 +48,31 @@ const Service = () => {
           </div>
         </div>
 
-      <BarTrendVisitor />
+        {/* Widget 2 */}
+        <div className="widget-2 m-8 ">
+          <span className="font-bold text-left flex pb-5 pt-4 text-gray-700">
+            TREND KUNJUNGAN
+          </span>
+          <div className="grafik">
+            <BarTrendVisitor />
+          </div>
+        </div>
+
+        {/* Widget 3 */}
+        <div className="widget-3 gap-4 ml-8 mt-12 flex flex-row text-left">
+          <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
+            POPULASI PASIEN
+            <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+              <PatientPopulation />
+            </div>
+          </span>
+          <span className="font-bold text-left basis-1/2 mr-5 pb-8 pt-4 text-gray-700">
+            SEBARAN RAWAT INAP
+            <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+              <InpatientDistribution />
+            </div>
+          </span>
+        </div>
 
 
       </div>

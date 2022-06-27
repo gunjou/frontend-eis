@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import { DataGrid } from "@mui/x-data-grid"
-import { columns, rows } from "../datatable/bedAvaibility"
+import { columns, rows } from "../../datatable/bedAvaibility"
 
 
 const BedAvailability = () => {

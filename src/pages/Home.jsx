@@ -1,11 +1,11 @@
 import Filter from "../components/Filter";
-import Widget from "../components/Widget";
 import Card from "../components/Card";
-import TrendVisitor from "../components/diagram/TrendVisitor";
-import TypeVisitor from "../components/diagram/TypeVisitor";
-import BedAvailability from "../components/diagram/BedAvailability";
-import UsageBedCard from "../components/diagram/UsageBedCard";
-import TopDiagnosa from "../components/diagram/TopDiagnosa";
+import Widget from "../components/diagram/dashboard/Widget";
+import TrendVisitor from "../components/diagram/dashboard/TrendVisitor";
+import TypeVisitor from "../components/diagram/dashboard/TypeVisitor";
+import BedAvailability from "../components/diagram/dashboard/BedAvailability";
+import UsageBedCard from "../components/diagram/dashboard/UsageBedCard";
+import TopDiagnosa from "../components/diagram/dashboard/TopDiagnosa";
 import moment from "moment";
 
 // Method return date
