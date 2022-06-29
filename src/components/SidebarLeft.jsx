@@ -1,4 +1,3 @@
-import React from "react";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
 import InventoryIcon from "@mui/icons-material/Inventory";
@@ -7,60 +6,75 @@ import RequestPageIcon from "@mui/icons-material/RequestPage";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 // import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-// #00A63C, #009D82, #0093CE, #009D22, #007400
-const SidebarLeft = () => {
+const active = {
+  color: 'white',
+  padding: '8px',
+  fontWeight: 'bold',
+  borderRadius: '0.75rem',
+  backgroundColor: '#68c4ae',
+  width: '100%',
+  textAlign: 'left'
+}
+
+const nonactive = {
+  // color: 'rgb(55 65 81)',
+  padding: '8px'
+}
+
+
+const SidebarLeft = ({ page }) => {
   return (
     <div className="sidebar-left">
-      <div className="header p-3">
-        <div className="logo w-48 pb-3">
+      <div className="header pr-3 pl-3">
+        <div className="logo w-48 pb-3 pt-3">
           <img
             src={process.env.PUBLIC_URL + "images/logo.svg"}
             alt="Jasamedika"
           />
         </div>
-        <div className="">
+        <div className="mb-4">
           <hr />
           {/* <ArrowLeftIcon className='float-right flex-1' style={"margin-top: -5;"}/> */}
         </div>
         <div className="items text-gray-700">
           <ul>
-            <li className="flex item-center p-2 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
-              <Link to="/">
+            <li className="flex item-center hover:text-[#049D79]">
+              <NavLink to="/" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <DashboardIcon className="text-sm" />
                 <span className="pl-2">Dashboard</span>
-              </Link>
+              </NavLink>
             </li>
-            <li className="flex item-center p-2 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
-              <Link to="/service">
+            <li className="flex item-center hover:text-[#049D79]">
+              <NavLink to="/service" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <InsertChartIcon className="text-sm" />
                 <span className="pl-2">Service</span>
-              </Link>
+              </NavLink>
             </li>
-            <li className="flex item-center p-2 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
-              <Link to="/inventory">
+            <li className="flex item-center hover:text-[#049D79]">
+              <NavLink to="/inventory" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <InventoryIcon className="text-sm" />
                 <span className="pl-2">Inventory</span>
-              </Link>
+              </NavLink>
             </li>
-            <li className="flex item-center p-2 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
-              <Link to="/medical-record">
+            <li className="flex item-center hover:text-[#049D79]">
+              <NavLink to="/medical-record" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <FilePresentIcon className="text-sm" />
                 <span className="pl-2">Medical Record</span>
-              </Link>
+              </NavLink>
             </li>
-            <li className="flex item-center p-2 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
-              <Link to="/finance">
+            <li className="flex item-center hover:text-[#049D79]">
+              <NavLink to="/finance" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <RequestPageIcon className="text-sm" />
                 <span className="pl-2">Finance</span>
-              </Link>
+              </NavLink>
             </li>
-            <li className="flex item-center p-2 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
-              <Link to="/hr">
+            <li className="flex item-center hover:text-[#049D79]">
+              <NavLink to="/hr" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <PeopleAltIcon className="text-sm" />
                 <span className="pl-2">Human Resource</span>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

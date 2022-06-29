@@ -1,13 +1,8 @@
 import "./App.css";
 import "./index.css";
-import Home from "./pages/Home";
-import Service from "./pages/Service";
-import Inventory from "./pages/Inventory";
-import MedicalRecord from "./pages/MedicalRecord";
-import Finance from "./pages/Finance";
-import HumanResource from "./pages/HumanResource"
-import SidebarLeft from "./components/SidebarLeft";
-import SidebarRight from "./components/SidebarRight";
+import Contents from "./components/Contents";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -15,18 +10,18 @@ function App() {
   return (
     <div className="App flex">
       <BrowserRouter>
-      <SidebarLeft />
         <Routes>
           <Route path="/">
-            <Route index element={<Home />} />
-            <Route path='/service' element={<Service />} />
-            <Route path='/inventory' element={<Inventory />} />
-            <Route path='/medical-record' element={<MedicalRecord />} />
-            <Route path='/finance' element={<Finance />} />
-            <Route path='/hr' element={<HumanResource />} />
+            <Route index element={<Contents type="home" />} />
+            <Route path='/service' element={<Contents type="service" />} />
+            <Route path='/inventory' element={<Contents type="inventory" />} />
+            <Route path='/medical-record' element={<Contents type="medical-record" />} />
+            <Route path='/finance' element={<Contents type="finance" />} />
+            <Route path='/hr' element={<Contents type="human-resource" />} />
+            <Route path='/login' element={<SignIn />} />
+            <Route path='/sign-up' element={<SignUp />} />
           </Route>
         </Routes>
-        <SidebarRight />
       </BrowserRouter>
     </div>
   );

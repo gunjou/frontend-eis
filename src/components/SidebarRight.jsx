@@ -10,7 +10,9 @@ const SidebarRight = () => {
           <PersonIcon className='text-sm' />
         </li>
         <li className="flex item-center p-2 mb-4 hover:bg-[#049D79]/60 hover:text-white hover:rounded-xl">
-          <PowerSettingsNewIcon className='text-sm' />
+          <a href="/login">
+            <PowerSettingsNewIcon className='text-sm' />
+          </a>
         </li>
       </ul>
     </div>
