@@ -12,7 +12,7 @@ const data01 = [
 const TypeVisitor = () => {
   return (
     <div className='typevisitor'>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="99%" height={400}>
         <PieChart width={600} height={600}>
           <Pie
             dataKey="value"

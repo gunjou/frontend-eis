@@ -1,4 +1,4 @@
-import Filter from "../components/Filter";
+import DateFilter from "../components/DateFilter";
 import moment from "moment";
 import Card from "../components/Card";
 import BarTrendVisitor from "../components/diagram/service/BarTrendVisitor";
@@ -17,7 +17,7 @@ const Service = () => {
   return (
     <div className="service grow">
       {/* Contents */}
-      <div className="grow m-3 rounded bg-[#04ac49]/10 rounded  mr-16">
+      <div className="grow m-3 rounded bg-[#04ac49]/10">
         {/* Title */}
         <div className="title text-left ml-5 p-3 text-gray-700 flex">
           <div className="title flex-1">
@@ -26,10 +26,14 @@ const Service = () => {
               {date.format("DD MMMM YYYY")}
             </span>
           </div>
-
           {/* Filter Date */}
-          <div className="filter-date text-right p-3">
-            <Filter />
+          <div className="filter-date text-right p-1 pr-4">
+            <div className="pr-36 text-xs font-semibold pb-2">
+              <span className="">Filter Tanggal</span>
+            </div>
+            <div className="filter">
+              <DateFilter />
+            </div>
           </div>
         </div>
 
@@ -38,7 +42,7 @@ const Service = () => {
           <span className="font-bold text-left flex pb-5 pt-4 text-gray-700">
             STANDAR MUTU PELAYANAN
           </span>
-          <div className="card flex flex-wrap gap-10 w-auto">
+          <div className="card flex flex-row">
             <Card type="bor" />
             <Card type="alos" />
             <Card type="toi" />

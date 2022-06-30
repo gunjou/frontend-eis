@@ -1,6 +1,6 @@
 
 
-const PolyclinicCard = ({type}) => {
+const PolyclinicCard = ({ type }) => {
 	let data;
 
 	// temporary

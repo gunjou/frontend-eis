@@ -1,4 +1,4 @@
-import Filter from "../components/Filter";
+import DateFilter from "../components/DateFilter";
 import moment from "moment";
 import EmployeeCard from "../components/diagram/humanResource/EmployeeCard";
 import CategoryEmployee from "../components/diagram/humanResource/CategoryEmployee";
@@ -18,7 +18,7 @@ const date = moment(
 const HumanResource = () => {
   return (
     <div className="HR grow">
-      <div className="grow m-3 rounded bg-[#04ac49]/10 rounded  mr-16">
+      <div className="grow m-3 rounded bg-[#04ac49]/10">
         {/* Title */}
         <div className="title text-left ml-5 p-3 text-gray-700 flex">
           <div className="title flex-1">
@@ -27,10 +27,14 @@ const HumanResource = () => {
               {date.format("DD MMMM YYYY")}
             </span>
           </div>
-
           {/* Filter Date */}
-          <div className="filter-date text-right p-3">
-            <Filter />
+          <div className="filter-date text-right p-1 pr-4">
+            <div className="pr-36 text-xs font-semibold pb-2">
+              <span className="">Filter Tanggal</span>
+            </div>
+            <div className="filter">
+              <DateFilter />
+            </div>
           </div>
         </div>
 

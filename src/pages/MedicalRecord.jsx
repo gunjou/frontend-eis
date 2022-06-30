@@ -1,4 +1,4 @@
-import Filter from "../components/Filter";
+import DateFilter from "../components/DateFilter";
 import moment from "moment";
 import PolyclinicCard from "../components/diagram/medicalRecord/PolyclinicCard";
 import MedicalRecord1 from "../components/diagram/medicalRecord/MedicalRecord1";
@@ -16,7 +16,7 @@ const date = moment(
 const MedicalRecord = () => {
   return (
     <div className="medical-record grow">
-      <div className="grow m-3 rounded bg-[#04ac49]/10 rounded  mr-16">
+      <div className="grow m-3 rounded bg-[#04ac49]/10">
         {/* Title */}
         <div className="title text-left ml-5 p-3 text-gray-700 flex">
           <div className="title flex-1">
@@ -25,10 +25,14 @@ const MedicalRecord = () => {
               {date.format("DD MMMM YYYY")}
             </span>
           </div>
-
           {/* Filter Date */}
-          <div className="filter-date text-right p-3">
-            <Filter />
+          <div className="filter-date text-right p-1 pr-4">
+            <div className="pr-36 text-xs font-semibold pb-2">
+              <span className="">Filter Tanggal</span>
+            </div>
+            <div className="filter">
+              <DateFilter />
+            </div>
           </div>
         </div>
 
@@ -46,7 +50,7 @@ const MedicalRecord = () => {
               MEDICAL RECORD 1
             </span>
             <div className="diagram pt-5">
-            <MedicalRecord1 />
+              <MedicalRecord1 />
             </div>
           </div>
           <div className="basis-1/3">
@@ -54,7 +58,7 @@ const MedicalRecord = () => {
               MEDICAL RECORD 2
             </span>
             <div className="diagram pt-5">
-            <MedicalRecord1 />
+              <MedicalRecord1 />
             </div>
           </div>
           <div className="basis-1/3">
@@ -62,7 +66,7 @@ const MedicalRecord = () => {
               MEDICAL RECORD 3
             </span>
             <div className="diagram pt-5">
-            <MedicalRecord3 />
+              <MedicalRecord3 />
             </div>
           </div>
         </div>
