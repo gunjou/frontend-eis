@@ -46,7 +46,7 @@ const EmployeeCard = ({type}) => {
 				</p>
 			</div>
 			<div className="right absolute inset-y-0 right-0 m-5">
-				<img src={process.env.PUBLIC_URL + data.img} />
+				<img src={process.env.PUBLIC_URL + data.img} alt={"employee-card"} />
 			</div>
 		</div>
 	)

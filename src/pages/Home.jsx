@@ -6,9 +6,10 @@ import TypeVisitor from "../components/diagram/dashboard/TypeVisitor";
 import BedAvailability from "../components/diagram/dashboard/BedAvailability";
 import UsageBedCard from "../components/diagram/dashboard/UsageBedCard";
 import TopDiagnosa from "../components/diagram/dashboard/TopDiagnosa";
+import DetailWidget from "../components/DetailWidget";
 import moment from "moment";
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 // Method return date
 const current = new Date();
@@ -20,9 +21,10 @@ const date = moment(
 
 const Home = () => {
   const [isVisitor, setIsVisitor] = useState(false);
-
   return (
     <div className="home grow">
+
+      <DetailWidget />
 
       {/* Contents */}
       <div className="flex-1 m-3 rounded bg-[#04ac49]/10">

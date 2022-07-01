@@ -11,8 +11,6 @@ import HumanResource from "../pages/HumanResource"
 const Contents = ({ type }) => {
 	let page;
 
-	const value = [59, 89, 76, 50, 2, 3, 12, 6, 19, 21];
-
 	switch (type) {
 		case "home":
 			page = { src: <Home />, };

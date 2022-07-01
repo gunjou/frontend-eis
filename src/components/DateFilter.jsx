@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
@@ -11,7 +11,7 @@ const DateFilter = () => {
 		<>
 			<div className="date-filter flex flec-row gap-1">
 				<div className="icon text-lg">
-					<CalendarMonthIcon />
+					<CalendarMonthIcon sx={{ fontSize: 30 }} />
 				</div>
 				<div className="from rounded text-gray-700">
 					<DatePicker
@@ -24,7 +24,7 @@ const DateFilter = () => {
 						isClearable={true}
 						dateFormat="dd/MM/yyyy"
 						className="pl-2 w-56 p-1 focus:outline-none focus:border-[#04ac49] focus:ring-[#04ac49] focus:ring-2 rounded"
-						placeholderText="Masukkan rentan tanggal"
+						placeholderText="Masukkan rentang tanggal"
 					/>
 				</div>
 			</div>

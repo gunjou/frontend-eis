@@ -1,4 +1,4 @@
-import { PieChart, Legend, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Legend, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
 	{ name: 'Group A', value: 400 },

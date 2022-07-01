@@ -8,7 +8,7 @@ const SignIn = () => {
 			<div className="form">
 				<form className="w-80 mb-12 h-[24rem] pl-5 pr-5 justify-center border border-white bg-gray-50 rounded drop-shadow-2xl">
 					<div className="logo pb-7 pt-5 text-xl">
-						<img src={process.env.PUBLIC_URL + "images/logo.svg"} className="w-48 m-auto mb-2" />
+						<img src={process.env.PUBLIC_URL + "images/logo.svg"} className="w-48 m-auto mb-2" alt="jasamedika-logo" />
 						<h5 className='text-gray-700'>Log in</h5>
 					</div>
 					<div className="username mb-4">
@@ -46,7 +46,7 @@ const SignIn = () => {
 			</div>
 			<div className="picture col-span-2">
 				<div className="pic w-[45rem]">
-					<img src={process.env.PUBLIC_URL + "images/login-register.webp"} />
+					<img src={process.env.PUBLIC_URL + "images/login-register.webp"} alt="signin" />
 				</div>
 			</div>
 		</div>

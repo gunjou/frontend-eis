@@ -71,6 +71,7 @@ const UsageBedCard = ({type}) => {
         <img
           src={process.env.PUBLIC_URL + data.img}
           className="w-16 p-1.5 rounded-full align-middle flex-none"
+					alt="bed-usage-card"
         />
         <div className="m-auto w-5/6 flex-col">
           <span className="flex">{data.title}</span>
