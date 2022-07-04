@@ -1,47 +1,40 @@
 export const columns = [
-    { field: 'id', headerName: 'No', type: 'number', width: 40, hideable: false, },
+    { field: 'id', headerName: 'No', type: 'number', width: 40, },
     {
       field: 'tgl_registrasi',
       headerName: 'Tgl Registrasi',
       width: 140,
-      hideable: false,
     },
     {
       field: 'no_registrasi',
       headerName: 'No Registrasi',
       minWidth: 140,
-      hideable: false,
     },
     {
       field: 'no_rm',
       headerName: 'No RM',
       width: 140,
-      hideable: false,
     },
     {
       field: 'nama_pasien',
       headerName: 'Nama Pasien',
       width: 200,
-      hideable: false,
     },
     {
       field: 'ruangan',
       headerName: 'Ruangan',
       width: 250,
-      hideable: false,
     },
     {
       field: 'tgl_pulang',
       headerName: 'Tgl Pulang',
       type: 'number',
       width: 140,
-      hideable: false,
     },
     {
       field: 'lama_rawat',
       headerName: 'Lama Rawat',
       width: 110,
-      hideable: false,
     },
 ];
 

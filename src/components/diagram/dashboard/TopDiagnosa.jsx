@@ -29,9 +29,10 @@ const TopDiagnosa = () => {
             left: 20,
             bottom: 5,
           }}
+          className='text-xs'
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" interval={0} />
           <YAxis />
           <Tooltip />
           <Legend />

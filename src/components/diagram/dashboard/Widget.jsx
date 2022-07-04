@@ -48,7 +48,7 @@ const Widget = ({ type }) => {
         <span className="value text-4xl m-3">
           {data.value}
         </span>
-        <p className="detail text-xs m-2 cursor-pointer" id="ppp" data-bs-toggle="modal" data-bs-target={data.modal}>
+        <p className="detail text-xs m-2 cursor-pointer" data-bs-toggle="modal" data-bs-target={data.modal}>
           details ⟶
         </p>
       </div>
