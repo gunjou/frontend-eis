@@ -23,6 +23,7 @@ const Home = () => {
   const [isVisitor, setIsVisitor] = useState(false);
   return (
     <div className="home grow">
+      {/* {console.log(DetailWidget)} */}
 
       <DetailWidget />
 
