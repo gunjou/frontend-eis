@@ -1,16 +1,12 @@
 import { PieChart, Legend, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
-	{ name: 'S1 Profesi', value: 210 },
-	{ name: 'Diploma IV', value: 100 },
-	{ name: 'Diploma III', value: 90 },
-	{ name: 'SLTA', value: 75 },
-	{ name: 'S2', value: 75 },
-	{ name: 'SPK', value: 60 },
-	{ name: 'NERS', value: 100 },
+	{ name: 'Nakes', value: 150 },
+	{ name: 'Non Nakes', value: 135 },
+	{ name: 'Tenaga Testing', value: 40 },
 ];
 
-const COLORS = ['#3AB0FF', '#FFB562', '#F87474', '#F4E06D', '#C499BA', '#68A7AD', '#40DFEF']
+const COLORS = ['#3AB0FF', '#FFB562', '#F87474', '#FF8042']
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -24,9 +20,10 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
       </text>
   );
 };
-const Education = () => {
+
+const WorkUnit = () => {
   return (
-    <div className='education'>
+    <div className="work-unit">
         <ResponsiveContainer width="99%" height={300}>
 				<PieChart width={300} height={300}>
 					<Legend layout="horizontal" verticalAlign="bottom" align="center" />
@@ -50,4 +47,4 @@ const Education = () => {
   )
 }
 
-export default Education
+export default WorkUnit

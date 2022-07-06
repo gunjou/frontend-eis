@@ -1,23 +1,45 @@
-import React from 'react'
-import TableDetail from './diagram/home/TableDetail'
+import { Box } from "@mui/material"
+import { DataGrid, GridToolbar, checkboxSelection, disableVirtualization } from "@mui/x-data-grid"
+import { columns, rowsTetap, rowsTidakTetap, rowsSemua } from "../../../datatable/humanResource/tableDetail";
 
-const DetailWidget = () => {
+
+const DataPegawai = ({param}) => {
+	let data;
+	switch (param) {
+		case "pegawai":
+			data = { title: "Pegawai", rows: rowsSemua }; break;
+		case "tetap":
+			data = { title: "Tetap", rows: rowsTetap }; break;
+		case "tidak-tetap":
+			data = { title: "Tidak Tetap", rows: rowsTidakTetap }; break;
+		default:
+			break;
+	}
+
+	return (
+    <div className="table-detail">
+      <Box sx={{ width: '100%', height: 400 }}>
+            <DataGrid
+            rows={data.rows}
+            columns={columns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+            components={{ Toolbar: GridToolbar, }}
+            disableVirtualization
+						checkboxSelection
+            />
+        </Box>
+    </div>
+	)
+}
+
+
+const DetailPegawai = () => {
 
 	const data = [
-		{ id: "detail-pasien-rawat-jalan", title: "Pasien Rawat Jalan", },
-		{ id: "detail-pasien-igd", title: "Pasien IGD", },
-		{ id: "detail-pasien-rawat-inap", title: "Pasien Rawat Inap", },
-		{ id: "detail-pasien-radiologi", title: "Pasien Radiologi", },
-		{ id: "detail-pasien-laboratorium", title: "Pasien Laboratorium", },
-		{ id: "detail-pasien-rehabilitasi", title: "Pasien Rehabilitasi Medik", },
-		{ id: "detail-pasien-bedah", title: "Pasien Bedah", },
-		{ id: "detail-farmasi", title: "Pasien Farmasi", },
-		{ id: "detail-pengunjung-rawat-jalan", title: "Pengunjung Rawat Jalan", },
-		{ id: "detail-pengunjung-igd", title: "Pengunjung IGD", },
-		{ id: "detail-pengunjung-rawat-inap", title: "Pengunjung Rawat Inap", },
-		{ id: "detail-pengunjung-radiologi", title: "Pengunjung Radiologi", },
-		{ id: "detail-pengunjung-laboratorium", title: "Pengunjung Laboratorium", },
-		{ id: "detail-pengunjung-rehabilitasi", title: "Pengunjung Rehabilitasi Medik", },
+		{ id: "pegawai", title: "Semua Pegawai", },
+		{ id: "tetap", title: "Pegawai Tetap", },
+		{ id: "tidak-tetap", title: "Pegawai Tidak Tetap", },
 	]
 
 	return (
@@ -36,7 +58,7 @@ const DetailWidget = () => {
 									data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<div class="modal-body p-4">
-								<TableDetail />
+								<DataPegawai param={data.id} />
 							</div>
 						</div>
 					</div>
@@ -46,4 +68,4 @@ const DetailWidget = () => {
 	)
 }
 
-export default DetailWidget
+export default DetailPegawai

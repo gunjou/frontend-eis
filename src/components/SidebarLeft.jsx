@@ -1,5 +1,4 @@
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import FilePresentIcon from "@mui/icons-material/FilePresent";
 import RequestPageIcon from "@mui/icons-material/RequestPage";
@@ -51,11 +50,6 @@ const SidebarLeft = () => {
               </NavLink>
             </li>
             <li className="flex item-center hover:text-[#049D79]">
-              <NavLink to="/service" style={({ isActive }) => (isActive ? active : nonactive)}>
-                <InsertChartIcon className="text-sm" />
-              </NavLink>
-            </li>
-            <li className="flex item-center hover:text-[#049D79]">
               <NavLink to="/inventory" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <InventoryIcon className="text-sm" />
               </NavLink>
@@ -97,12 +91,6 @@ const SidebarLeft = () => {
             <li className="flex item-center hover:text-[#049D79]">
               <NavLink to="/" style={({ isActive }) => (isActive ? active : nonactive)}>
                 <DashboardIcon className="text-sm" />
-                <span className="pl-2">Dashboard</span>
-              </NavLink>
-            </li>
-            <li className="flex item-center hover:text-[#049D79]">
-              <NavLink to="/service" style={({ isActive }) => (isActive ? active : nonactive)}>
-                <InsertChartIcon className="text-sm" />
                 <span className="pl-2">Service</span>
               </NavLink>
             </li>

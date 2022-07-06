@@ -12,6 +12,7 @@ const EmployeeCard = ({type}) => {
 				img: "images/icon-pegawai-total.png",
 				title: "Pegawai",
 				value: value[0],
+				modal: "#pegawai"
 			};
 			break;
 		case "tetap":
@@ -19,6 +20,7 @@ const EmployeeCard = ({type}) => {
 				img: "images/icon-pegawai-tetap.png",
 				title: "Tetap",
 				value: value[1],
+				modal: "#tetap"
 			};
 			break;
 		case "tidak-tetap":
@@ -26,6 +28,7 @@ const EmployeeCard = ({type}) => {
 				img: "images/icon-pegawai-tidak-tetap.png",
 				title: "Tidak Tetap",
 				value: value[2],
+				modal: "#tidak-tetap"
 			};
 			break;
 		default:
@@ -37,12 +40,12 @@ const EmployeeCard = ({type}) => {
 			<div className="left flex flex-col text-left">
 				<span className="title text-sm m-2">
 					{data.title}
-				</span>
+				</span> 
 				<span className="value text-4xl m-3">
 					{data.value}
 				</span>
-				<p className="detail text-xs m-2">
-					details
+				<p className="detail text-xs m-2 cursor-pointer" data-bs-toggle="modal" data-bs-target={data.modal}>
+					details ⟶
 				</p>
 			</div>
 			<div className="right absolute inset-y-0 right-0 m-5">

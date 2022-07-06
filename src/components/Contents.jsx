@@ -1,7 +1,6 @@
 import SidebarLeft from "./SidebarLeft"
 import SidebarRight from "./SidebarRight"
 import Home from "../pages/Home"
-import Service from "../pages/Service"
 import Inventory from "../pages/Inventory"
 import MedicalRecord from "../pages/MedicalRecord"
 import Finance from "../pages/Finance"
@@ -14,9 +13,6 @@ const Contents = ({ type }) => {
 	switch (type) {
 		case "home":
 			page = { src: <Home />, };
-			break;
-		case "service":
-			page = { src: <Service />, };
 			break;
 		case "inventory":
 			page = { src: <Inventory />, };

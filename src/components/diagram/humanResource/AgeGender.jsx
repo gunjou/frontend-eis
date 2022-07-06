@@ -22,7 +22,7 @@ const data = [
   return null;
 };
 
-const Age = () => {
+const AgeGender = () => {
   return (
     <div className='age'>
         <ResponsiveContainer width="99%" height={300}>
@@ -34,7 +34,7 @@ const Age = () => {
             top: 20,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 5, 
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -42,12 +42,12 @@ const Age = () => {
           <YAxis />
           <Tooltip content={<CustomTooltip />} />
           <Legend />
-          <Bar dataKey="laki_laki" stackId="a" fill="#8884d8" />
-          <Bar dataKey="perempuan" stackId="a" fill="#82ca9d" />
+          <Bar dataKey="laki_laki" stackId="a" fill="#3AB0FF" />
+          <Bar dataKey="perempuan" fill="#F57CAC" />
         </BarChart>
       </ResponsiveContainer>
     </div>
   )
 }
 
-export default Age
+export default AgeGender

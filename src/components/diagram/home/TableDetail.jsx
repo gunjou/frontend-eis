@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import { DataGrid, GridToolbar, disableVirtualization } from "@mui/x-data-grid"
-import { columns, rows } from "../../datatable/tableDetail"
+import { columns, rows } from "../../datatable/home/tableDetail"
 
 const TableDetail = () => {
   return (

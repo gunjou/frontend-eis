@@ -1,11 +1,11 @@
 import DateFilter from "../components/DateFilter";
 import Card from "../components/Card";
-import Widget from "../components/diagram/dashboard/Widget";
-import TrendVisitor from "../components/diagram/dashboard/TrendVisitor";
-import TypeVisitor from "../components/diagram/dashboard/TypeVisitor";
-import BedAvailability from "../components/diagram/dashboard/BedAvailability";
-import UsageBedCard from "../components/diagram/dashboard/UsageBedCard";
-import TopDiagnosa from "../components/diagram/dashboard/TopDiagnosa";
+import Widget from "../components/diagram/home/Widget";
+import TrendVisitor from "../components/diagram/home/TrendVisitor";
+import TypeVisitor from "../components/diagram/home/TypeVisitor";
+import BedAvailability from "../components/diagram/home/BedAvailability";
+import UsageBedCard from "../components/diagram/home/UsageBedCard";
+import TopDiagnosa from "../components/diagram/home/TopDiagnosa";
 import DetailWidget from "../components/DetailWidget";
 import moment from "moment";
 
@@ -23,8 +23,8 @@ const Home = () => {
   const [isVisitor, setIsVisitor] = useState(false);
   return (
     <div className="home grow">
-      {/* {console.log(DetailWidget)} */}
 
+      {/* Modal Detail Widget */}
       <DetailWidget />
 
       {/* Contents */}
@@ -32,7 +32,7 @@ const Home = () => {
         {/* Title */}
         <div className="title text-left ml-5 p-3 text-gray-700 flex">
           <div className="title flex-1">
-            <h4 className="text-2xl font-bold">Dashboard</h4>
+            <h4 className="text-2xl font-bold">SERVICE</h4>
             <span className="text-sm text-gray">
               {date.format("DD MMMM YYYY")}
             </span>

@@ -13,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Contents type="home" />} />
-            <Route path='/service' element={<Contents type="service" />} />
             <Route path='/inventory' element={<Contents type="inventory" />} />
             <Route path='/medical-record' element={<Contents type="medical-record" />} />
             <Route path='/finance' element={<Contents type="finance" />} />

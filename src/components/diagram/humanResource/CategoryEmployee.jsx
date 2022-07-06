@@ -1,48 +1,49 @@
-import { PieChart, Legend, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
 
 const data = [
-	{ name: 'Apoteker', value: 400 },
-	{ name: 'Administrasi', value: 500 },
-	{ name: 'Bidan', value: 300 },
-	{ name: 'Dokter', value: 200 },
+	{ name: 'SIMRS', total: 3 },
+	{ name: 'PELAKSANA', total: 5 },
+	{ name: 'Ahli Gizi', total: 12 },
+	{ name: 'Terapis', total: 10 },
+	{ name: 'Laboratorium', total: 8 },
+	{ name: 'Nutrisionis', total: 7 },
+	{ name: 'Radiografer', total: 5 },
+	{ name: 'Kasir', total: 10 },
+	{ name: 'Perekam Medis', total: 4 },
+	{ name: 'Apoteker', total: 15 },
+	{ name: 'BIDAN', total: 14 },
+	{ name: 'DOKTER', total: 25 },
+	{ name: 'PERAWAT', total: 30 },
+	{ name: 'Administrasi', total: 10 },
 ];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+function CustomBarLabel(props) {
+  const { x, y, width, value } = props;
+  return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-6}>{`${value}`}</text>;
+}
 
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-	const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-	const x = cx + radius * Math.cos(-midAngle * RADIAN);
-	const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-	return (
-		<text x={x} y={y} fill="black" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-			{`${(percent * 100).toFixed(0)}%`}
-		</text>
-	);
+CustomBarLabel.propTypes = {
+  x: PropTypes.number,
+  y: PropTypes.number,
+  payload: PropTypes.object,
 };
 
 const CategoryEmployee = () => {
 	return (
 		<div className='category-employee'>
 			<ResponsiveContainer width="99%" height={300}>
-				<PieChart width={300} height={300}>
-					<Legend layout="horizontal" verticalAlign="bottom" align="center" />
-					<Pie
-						data={data}
-						cx="50%"
-						cy="50%"
-						labelLine={false}
-						label={renderCustomizedLabel}
-						outerRadius={130}
-						fill="#8884d8"
-						dataKey="value"
-					>
-						{data.map((entry, index) => (
-							<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-						))}
-					</Pie>
-				</PieChart>
+				<BarChart
+					width={500}
+					height={300}
+					data={data}
+					margin={{ top: 5, right: 30, left: 20, bottom: 5, }}
+					className='text-xs'
+				>
+					<XAxis dataKey="name" interval={0} />
+					<Tooltip />
+					<Bar dataKey="total" name='Total' barSize={50} fill="#4C785D" label={<CustomBarLabel />}/>
+				</BarChart>
 			</ResponsiveContainer>
 		</div>
 	)

@@ -1,7 +1,8 @@
 import DateFilter from "../components/DateFilter";
 import moment from "moment";
-import BarTrendVisitor from "../components/diagram/service/BarTrendVisitor";
+import TrendIncome from "../components/diagram/finance/TrendIncome";
 import IncomeTrend from "../components/diagram/finance/IncomeTrend";
+import InstallationRevenue from "../components/diagram/finance/InstallationRevenue";
 
 
 // Method return date
@@ -41,12 +42,22 @@ const Finance = () => {
             TREND PENDAPATAN
           </span>
           <div className="grafik">
-            <BarTrendVisitor />
+            <TrendIncome /> 
           </div>
         </div>
 
-        {/* Widget 2 */}
-        <div className="widget-2 gap-4 ml-8 mt-12 flex flex-row text-left">
+        {/* Widget 1 */}
+        <div className="widget-1 m-8 ">
+          <span className="font-bold text-left flex pb-5 pt-4 text-gray-700">
+            TREND PENDAPATAN
+          </span>
+          <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+            <InstallationRevenue /> 
+          </div>
+        </div>
+
+        {/* Widget 3 */}
+        <div className="widget-3 gap-4 ml-8 mt-12 flex flex-row text-left">
           <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
             PENDAPATAN MASING-MASING INSTANSI
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">

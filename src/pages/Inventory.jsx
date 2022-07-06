@@ -1,6 +1,5 @@
 import DateFilter from "../components/DateFilter";
 import moment from "moment";
-import BarTrendVisitor from "../components/diagram/service/BarTrendVisitor";
 
 
 // Method return date
@@ -36,17 +35,17 @@ const Inventory = () => {
         </div>
 
         {/* Widget 1 */}
-        <div className="widget-3 m-8 ">
+        {/* <div className="widget-3 m-8 ">
           <span className="font-bold text-left flex pb-5 pt-4 text-gray-700">
             KPI PERFORMANCE DARI STOCK
           </span>
           <div className="grafik">
             <BarTrendVisitor />
           </div>
-        </div>
+        </div> */}
 
         {/* Widget 2 */}
-        <div className="widget-4 gap-4 ml-8 mt-12 flex flex-row text-left">
+        {/* <div className="widget-4 gap-4 ml-8 mt-12 flex flex-row text-left">
           <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
             SUPPLY CHAIN OVERVIEW
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">
@@ -59,7 +58,7 @@ const Inventory = () => {
               <BarTrendVisitor />
             </div>
           </span>
-        </div>
+        </div> */}
 
       </div>
     </div>

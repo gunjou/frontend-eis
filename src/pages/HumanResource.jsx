@@ -2,9 +2,11 @@ import DateFilter from "../components/DateFilter";
 import moment from "moment";
 import EmployeeCard from "../components/diagram/humanResource/EmployeeCard";
 import CategoryEmployee from "../components/diagram/humanResource/CategoryEmployee";
-import Gender from "../components/diagram/humanResource/Gender";
-import Age from "../components/diagram/humanResource/Age";
+import AgeGender from "../components/diagram/humanResource/AgeGender";
 import Education from "../components/diagram/humanResource/Education";
+import TypeEmployee from "../components/diagram/humanResource/TypeEmployee";
+import WorkUnit from "../components/diagram/humanResource/WorkUnit";
+import DetailPegawai from "../components/diagram/humanResource/modal/detailPegawai";
 
 // Method return date
 const current = new Date();
@@ -18,6 +20,9 @@ const date = moment(
 const HumanResource = () => {
   return (
     <div className="HR grow">
+
+<DetailPegawai />
+
       <div className="grow m-3 rounded bg-[#04ac49]/10">
         {/* Title */}
         <div className="title text-left ml-5 p-3 text-gray-700 flex">
@@ -47,32 +52,42 @@ const HumanResource = () => {
 
         {/* Widget 2 */}
         <div className="widget-2 gap-4 ml-8 mt-12 flex flex-row text-left">
-          <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
+          <span className="font-bold text-left basis-full mr-5 pb-8 pt-4 text-gray-700">
             KATEGORI PEGAWAI
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">
               <CategoryEmployee />
             </div>
           </span>
-          <span className="font-bold text-left basis-1/2 mr-5 pb-8 pt-4 text-gray-700">
-            JENIS KELAMIN
+        </div>
+
+        {/* Widget 3 */}
+        <div className="widget-3 gap-4 ml-8 mt-12 mr-6 flex flex-row text-left">
+          <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
+            PENDIDIKAN
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">
-              <Gender />
+              <Education />
+            </div>
+          </span>
+          <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
+            USIA
+            <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+              <AgeGender />
             </div>
           </span>
         </div>
 
-        {/* Widget 3 */}
-        <div className="widget-2 gap-4 ml-8 mt-12 flex flex-row text-left">
+        {/* Widget 4 */}
+        <div className="widget-4 gap-4 ml-8 mt-12 mr-6 flex flex-row text-left">
           <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
-            USIA
+            JENIS PEGAWAI
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">
-              <Age />
+              <TypeEmployee />
             </div>
           </span>
-          <span className="font-bold text-left basis-1/2 mr-5 pb-8 pt-4 text-gray-700">
-            PENDIDIKAN
+          <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
+            UNIT KERJA
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">
-              <Education />
+              <WorkUnit />
             </div>
           </span>
         </div>
