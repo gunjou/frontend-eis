@@ -1,5 +1,8 @@
 import DateFilter from "../components/DateFilter";
 import moment from "moment";
+import StockCard from "components/diagram/inventory/StockCard";
+import TrendStock from "components/diagram/inventory/TrendStock";
+import ItemsDetail from "components/diagram/inventory/ItemsDetail";
 
 
 // Method return date
@@ -35,14 +38,31 @@ const Inventory = () => {
         </div>
 
         {/* Widget 1 */}
-        {/* <div className="widget-3 m-8 ">
-          <span className="font-bold text-left flex pb-5 pt-4 text-gray-700">
-            KPI PERFORMANCE DARI STOCK
+        <div className="widget-2 flex flex-row">
+          <StockCard type='optimal' />
+          <StockCard type='overstock' />
+          <StockCard type='understock' />
+        </div>
+
+        {/* Widget 2 */}
+        <div className="widget-2 ml-8 mt-5 text-left">
+          <span className="font-bold text-left basis-full mr-5 pb-8 pt-4 text-gray-700">
+            TREND STOCK VALUE
+            <div className="p-3">
+              <TrendStock />
+            </div>
           </span>
-          <div className="grafik">
-            <BarTrendVisitor />
-          </div>
-        </div> */}
+        </div>
+
+        {/* Widget 3 */}
+        <div className="widget-3 ml-8 mr-8 mt-5 text-left">
+          <span className="font-bold pb-8 pt-4 text-gray-700">
+            DETAIL ITEMS
+            <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+              <ItemsDetail />
+            </div>
+          </span>
+        </div>
 
         {/* Widget 2 */}
         {/* <div className="widget-4 gap-4 ml-8 mt-12 flex flex-row text-left">

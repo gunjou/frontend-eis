@@ -18,7 +18,7 @@ const TopDiagnosa = () => {
           <XAxis type="number" />
           <YAxis dataKey="name" type="category" />
           <Tooltip />
-          <Bar dataKey="total" barSize={25} fill="#4C785D" />
+          <Bar dataKey="total" name='Total' barSize={25} fill="#4C785D" />
         </BarChart>
       </ResponsiveContainer>
     </div>

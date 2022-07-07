@@ -1,4 +1,4 @@
-import { PieChart, Legend, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Legend, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 const data = [
 	{ name: 'S1 Profesi', value: 210 },
@@ -44,6 +44,7 @@ const Education = () => {
 							<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
 						))}
 					</Pie>
+					<Tooltip />
 				</PieChart>
 			</ResponsiveContainer>
     </div>

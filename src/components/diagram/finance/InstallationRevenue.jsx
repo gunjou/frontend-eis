@@ -17,15 +17,15 @@ const columns = [
 ];
 
 const rows = [
-	{ id: 1, namaInstalasi: 'Instalasi Farmasi', jumlah: 'Rp.596,006.00' },
-	{ id: 2, namaInstalasi: 'Instalasi Gawat Darurat', jumlah: 'Rp.2,530,000.00' },
-	{ id: 3, namaInstalasi: 'Instalasi Laboratorium', jumlah: 45 },
-	{ id: 4, namaInstalasi: 'Instalasi Rawat Jalan', jumlah: 16 },
-	{ id: 5, namaInstalasi: 'Instalasi Rawat Inap', jumlah: null },
-	{ id: 6, namaInstalasi: 'Instalasi Pemulasaran Jenazah', jumlah: 150 },
-	{ id: 7, namaInstalasi: 'Instalasi Radiologi', jumlah: 44 },
-	{ id: 8, namaInstalasi: 'Instalasi Bedah Sentral dan Ruang Rawat Sehari', jumlah: 36 },
-	{ id: 9, namaInstalasi: 'Instalasi Ambulance', jumlah: 65 },
+	{ id: 1, namaInstalasi: 'Instalasi Farmasi', jumlah: 'Rp.16,725,000.00' },
+	{ id: 2, namaInstalasi: 'Instalasi Gawat Darurat', jumlah: 'Rp.6,245,000.00' },
+	{ id: 3, namaInstalasi: 'Instalasi Laboratorium', jumlah: 'Rp.2,757,700.00' },
+	{ id: 4, namaInstalasi: 'Instalasi Rawat Jalan', jumlah: 'Rp.17,725,000.00' },
+	{ id: 5, namaInstalasi: 'Instalasi Rawat Inap', jumlah: 'Rp.7,069,900.00' },
+	{ id: 6, namaInstalasi: 'Instalasi Pemulasaran Jenazah', jumlah: 'Rp.200,000.00' },
+	{ id: 7, namaInstalasi: 'Instalasi Radiologi', jumlah: 'Rp.4,005,000.00' },
+	{ id: 8, namaInstalasi: 'Instalasi Bedah Sentral dan Ruang Rawat Sehari', jumlah: 'Rp.250,000.00' },
+	{ id: 9, namaInstalasi: 'Instalasi Ambulance', jumlah: 'Rp.150,000.00' },
 ];
 
 
@@ -36,8 +36,8 @@ const InstallationRevenue = () => {
 				<DataGrid
 					rows={rows}
 					columns={columns}
-					pageSize={5}
-					rowsPerPageOptions={[5]}
+					pageSize={10}
+					rowsPerPageOptions={[10]}
 					// checkboxSelection
 					// disableSelectionOnClick
 				/>

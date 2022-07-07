@@ -1,12 +1,12 @@
-import { PieChart, Legend, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { PieChart, Legend, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
-	{ name: 'Nakes', value: 150 },
-	{ name: 'Non Nakes', value: 135 },
-	{ name: 'Tenaga Testing', value: 40 },
+	{ name: 'BPJS', value: 90 },
+	{ name: 'Umum/Pribadi', value: 150 },
+	{ name: 'BPJS Rencana Rawat', value: 30 },
 ];
 
-const COLORS = ['#3AB0FF', '#FFB562', '#F87474', '#FF8042']
+const COLORS = ['#8D8DAA', '#6262B9', '#F56D91', '#FF8042']
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -21,10 +21,10 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
   );
 };
 
-const WorkUnit = () => {
+const TypePatientIncome = () => {
   return (
-    <div className="work-unit">
-        <ResponsiveContainer width="99%" height={300}>
+    <div className="type-patient-income">
+			<ResponsiveContainer width="99%" height={300}>
 				<PieChart width={300} height={300}>
 					<Legend layout="horizontal" verticalAlign="bottom" align="center" />
 					<Pie
@@ -48,4 +48,4 @@ const WorkUnit = () => {
   )
 }
 
-export default WorkUnit
+export default TypePatientIncome

@@ -1,8 +1,9 @@
 import DateFilter from "../components/DateFilter";
 import moment from "moment";
-import TrendIncome from "../components/diagram/finance/TrendIncome";
-import IncomeTrend from "../components/diagram/finance/IncomeTrend";
+import TrendIncome from "components/diagram/finance/TrendIncome";
+import BPJSTrend from "components/diagram/finance/BPJSTrend";
 import InstallationRevenue from "../components/diagram/finance/InstallationRevenue";
+import TypePatientIncome from "components/diagram/finance/TypePatientIncome";
 
 
 // Method return date
@@ -46,10 +47,10 @@ const Finance = () => {
           </div>
         </div>
 
-        {/* Widget 1 */}
-        <div className="widget-1 m-8 ">
+        {/* Widget 2 */}
+        <div className="widget-2 m-8 ">
           <span className="font-bold text-left flex pb-5 pt-4 text-gray-700">
-            TREND PENDAPATAN
+            PENDAPATAN PERINSTALASI
           </span>
           <div className="p-3 rounded border-white bg-white drop-shadow-xl">
             <InstallationRevenue /> 
@@ -59,15 +60,15 @@ const Finance = () => {
         {/* Widget 3 */}
         <div className="widget-3 gap-4 ml-8 mt-12 flex flex-row text-left">
           <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
-            PENDAPATAN MASING-MASING INSTANSI
+            PENDAPATAN PERJENIS PASIEN
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">
-              <IncomeTrend />
+              <TypePatientIncome />
             </div>
           </span>
           <span className="font-bold text-left basis-1/2 mr-5 pb-8 pt-4 text-gray-700">
-            TREND BPJS
+            TREND KLAIM BPJS
             <div className="p-3 rounded border-white bg-white drop-shadow-xl">
-              <IncomeTrend />
+              <BPJSTrend />
             </div>
           </span>
         </div>

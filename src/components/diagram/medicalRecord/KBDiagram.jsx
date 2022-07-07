@@ -1,12 +1,17 @@
-import { PieChart, Legend, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { PieChart, Legend, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
-	{ name: 'Nakes', value: 150 },
-	{ name: 'Non Nakes', value: 135 },
-	{ name: 'Tenaga Testing', value: 40 },
+	{ name: 'IUD', value: 11 },
+	{ name: 'Pil', value: 4 },
+	{ name: 'Kondom', value: 1 },
+	{ name: 'Obat Vaginal', value: 1 },
+	{ name: 'MO Pria', value: 2 },
+	{ name: 'MO Wanita', value: 3 },
+	{ name: 'Suntikan', value: 6 },
+	{ name: 'Implan', value: 5 },
 ];
 
-const COLORS = ['#3AB0FF', '#FFB562', '#F87474', '#FF8042']
+const COLORS = ['#8D8DAA', '#6262B9', '#F56D91', '#FF8042']
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -20,13 +25,12 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
       </text>
   );
 };
-
-const WorkUnit = () => {
+const KBDiagram = () => {
   return (
-    <div className="work-unit">
-        <ResponsiveContainer width="99%" height={300}>
+    <div className="keluarga-berencana">
+        <ResponsiveContainer width="99%" height={340}>
 				<PieChart width={300} height={300}>
-					<Legend layout="horizontal" verticalAlign="bottom" align="center" />
+					<Legend layout="horizontal" verticalAlign="bottom" align="center" wrapperStyle={{fontSize: "12px"}} />
 					<Pie
 						data={data}
 						cx="50%"
@@ -48,4 +52,4 @@ const WorkUnit = () => {
   )
 }
 
-export default WorkUnit
+export default KBDiagram

@@ -21,7 +21,7 @@ const HumanResource = () => {
   return (
     <div className="HR grow">
 
-<DetailPegawai />
+      <DetailPegawai />
 
       <div className="grow m-3 rounded bg-[#04ac49]/10">
         {/* Title */}
@@ -70,7 +70,7 @@ const HumanResource = () => {
           </span>
           <span className="font-bold text-left basis-1/2 pb-8 pt-4 text-gray-700">
             USIA
-            <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+            <div className="pt-3 pb-3 rounded border-white bg-white drop-shadow-xl">
               <AgeGender />
             </div>
           </span>
