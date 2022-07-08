@@ -1,4 +1,5 @@
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, } from "recharts";
+import { dataStatusStock } from "components/datatable/inventory/dataStatusStock";
 
 var formatter = new Intl.NumberFormat("id-ID", {
   style: "currency",
@@ -16,21 +17,6 @@ const DataFormater = (number) => {
     return number.toString();
   }
 };
-
-const data = [
-  { month: "Januari", optimal: 885500000, over: 700000000, under: 307500000 },
-  { month: "Februari", optimal: 805500000, over: 640000000, under: 397500000 },
-  { month: "Maret", optimal: 892500000, over: 770000000, under: 317500000 },
-  { month: "April", optimal: 904500000, over: 650000000, under: 227500000 },
-  { month: "Mei", optimal: 795500000, over: 800000000, under: 280500000 },
-  { month: "Juni", optimal: 801500000, over: 700000000, under: 200000000 },
-  { month: "Juli", optimal: 770500000, over: 560000000, under: 300500000 },
-  { month: "Agustus", optimal: 990000000, over: 450000000, under: 150500000 },
-  { month: "September", optimal: 1000500000, over: 560000000, under: 257500000, },
-  { month: "Oktober", optimal: 960000000, over: 780000000, under: 307500000 },
-  { month: "November", optimal: 970000000, over: 800000000, under: 300500000 },
-  { month: "Desember", optimal: 1090500000, over: 650000000, under: 327500000 },
-];
 
 const toPercent = (decimal) => `${(decimal * 100).toFixed(1)}%`;
 
@@ -61,7 +47,7 @@ const TrendStock = () => {
         <AreaChart
           width={500}
           height={400}
-          data={data}
+          data={dataStatusStock}
           stackOffset="expand"
           margin={{
             top: 10,

@@ -34,7 +34,7 @@ const MedicTrend = () => {
           <YAxis />
           <Tooltip />
           {/* <Legend /> */}
-          <Bar dataKey="total" name='Total' fill="#cfc0fa" barSize={60} />
+          <Bar dataKey="total" name='Total' fill="#cfa3fa" barSize={60} />
           {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
         </BarChart>
       </ResponsiveContainer>

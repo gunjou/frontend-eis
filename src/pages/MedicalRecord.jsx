@@ -100,7 +100,7 @@ const MedicalRecord = () => {
         </div>
 
         {/* Widget 5 */}
-        <div className="widget-5 flex flex-row mt-12 pl-5 text-left">
+        <div className="widget-5 flex flex-row mt-12 pb-8 pl-5 text-left">
           <div className="basis-1/2 ">
             <span className="font-bold text-gray-700">KEGIATAN LABORATORIUM</span>
             <div className="diagram pt-5">

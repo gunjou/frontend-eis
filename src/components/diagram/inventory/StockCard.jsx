@@ -2,6 +2,7 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
+
 const StockCard = ({ type }) => {
   let data;
 
@@ -79,17 +80,16 @@ const StockCard = ({ type }) => {
             )}
           </>
         </div>
-        <p className="detail text-xs m-2 cursor-pointer" >
+        <p className="detail text-xs m-2 cursor-pointer" data-bs-toggle="modal" data-bs-target={data.modal} >
             details ⟶
         </p>
       </div>
-      <div
-        className="right absolute inset-y-0 right-0 m-3 cursor-pointer"
-        data-bs-toggle="modal"
-        data-bs-target={data.modal}
+      {/* <div className="right absolute inset-y-0 right-0 m-3 cursor-pointer"
+        // data-bs-toggle="modal"
+        // data-bs-target={data.modal}
       >
         <InfoOutlinedIcon fontSize="small" />
-      </div>
+      </div> */}
     </div>
   );
 };

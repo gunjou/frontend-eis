@@ -3,7 +3,10 @@ import moment from "moment";
 import StockCard from "components/diagram/inventory/StockCard";
 import TrendStock from "components/diagram/inventory/TrendStock";
 import ItemsDetail from "components/diagram/inventory/ItemsDetail";
-
+import DetailStock from "components/diagram/inventory/DetailStock";
+import { useState } from "react";
+import ItemsPredict from "components/diagram/inventory/ItemsPredict";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 // Method return date
 const current = new Date();
@@ -14,8 +17,11 @@ const date = moment(
 );
 
 const Inventory = () => {
+  const [isDiagram, setIsDiagram] = useState(false);
   return (
     <div className="inventory grow">
+      <DetailStock />
+
       {/* Contents */}
       <div className="grow m-3 rounded bg-[#04ac49]/10 ">
         {/* Title */}
@@ -39,9 +45,9 @@ const Inventory = () => {
 
         {/* Widget 1 */}
         <div className="widget-2 flex flex-row">
-          <StockCard type='optimal' />
-          <StockCard type='overstock' />
-          <StockCard type='understock' />
+          <StockCard type="optimal" />
+          <StockCard type="overstock" />
+          <StockCard type="understock" />
         </div>
 
         {/* Widget 2 */}
@@ -55,12 +61,48 @@ const Inventory = () => {
         </div>
 
         {/* Widget 3 */}
-        <div className="widget-3 ml-8 mr-8 mt-5 text-left">
-          <span className="font-bold pb-8 pt-4 text-gray-700">
+        <div className="widget-3 ml-8 pb-8 mr-8 mt-5 text-left">
+          <span className="font-bold pt-4 text-gray-700">
             DETAIL ITEMS
-            <div className="p-3 rounded border-white bg-white drop-shadow-xl">
-              <ItemsDetail />
-            </div>
+            {!isDiagram ? (
+              <>
+                <div className="category grid grid-cols-8 pt-5 text-xs pb-3">
+                  <button className="mr-3 text-white border-2 border-[#04A449]/0 bg-[#049D79]/60 hover:bg-[#049D79]/60 hover:text-white px-3 py-1 rounded cursor-default">
+                    Current Data
+                  </button>
+                  <button
+                    onClick={() => setIsDiagram(!isDiagram)}
+                    className="mr-3 text-gray-600 border-2 border-[#04A449]/0 hover:bg-[#049D79]/60 hover:text-white px-3 py-1 rounded"
+                  >
+                    Diagram Predict
+                  </button>
+                </div>
+                <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+                  <ItemsDetail />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="category grid grid-cols-8 pt-5 text-xs pb-3">
+                  <button
+                    onClick={() => setIsDiagram(!isDiagram)}
+                    className="mr-3 text-gray-600 border-2 border-[#04A449]/0 hover:bg-[#049D79]/60 hover:text-white px-3 py-1 rounded"
+                  >
+                    Current Data
+                  </button>
+                  <button className="mr-3 text-white border-2 border-[#04A449]/0 bg-[#049D79]/60 hover:bg-[#049D79]/60 hover:text-white px-3 py-1 rounded cursor-default">
+                    Diagram Predict
+                  </button>
+                </div>
+                <div className="p-3 rounded border-white bg-white drop-shadow-xl">
+              <div className="item p-5 cursor-pointer">
+              OMEPRAZOLE 40 MG INJ - OGB DEXA (E-CAT) 
+              <ArrowDropDownIcon />
+              </div>
+                  <ItemsPredict />
+                </div>
+              </>
+            )}
           </span>
         </div>
 
@@ -79,10 +121,9 @@ const Inventory = () => {
             </div>
           </span>
         </div> */}
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Inventory
+export default Inventory;
