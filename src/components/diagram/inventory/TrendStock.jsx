@@ -19,9 +19,9 @@ const CustomTooltip = ({ active, payload, label }) => {
     return (
       <div className="custom-tooltip text-left bg-gray-100/90 border p-3">
         <p className="label pb-2 text-sm font-bold">{`${label} : ${formatter.format(total)}`}</p>
-        <p className="intro text-black text-sm text-[#F78983]">{`Overstock : ${formatter.format(payload[2].value)} (${getPercent(payload[2].value, total)}) `}</p>
+        <p className="intro text-black text-sm text-[#49ABA6]">{`Overstock : ${formatter.format(payload[2].value)} (${getPercent(payload[2].value, total)}) `}</p>
         <p className="intro text-black text-sm text-[#7AAB6C]">{`Optimal : ${formatter.format(payload[1].value)} (${getPercent(payload[1].value, total)}) `}</p>
-        <p className="intro text-black text-sm text-[#49ABA6]">{`Understock : ${formatter.format(payload[0].value)} (${getPercent(payload[0].value, total)}) `}</p>
+        <p className="intro text-black text-sm text-[#F78983]">{`Understock : ${formatter.format(payload[0].value)} (${getPercent(payload[0].value, total)}) `}</p>
       </div>
     );
   }
@@ -48,9 +48,9 @@ const TrendStock = () => {
           <XAxis dataKey="month" />
           <YAxis tickFormatter={toPercent} />
           <Tooltip content={CustomTooltip} />
-          <Area type="monotone" dataKey="under" stackId="1" stroke="#49ABA6" fill="#49ABA6" strokeWidth={0} />
+          <Area type="monotone" dataKey="under" stackId="1" stroke="#F78983" fill="#F78983" strokeWidth={0} />
           <Area type="monotone" dataKey="optimal" stackId="1" stroke="#7AAB6C" fill="#7AAB6C" strokeWidth={0} />
-          <Area type="monotone" dataKey="over" stackId="1" stroke="#F78983" fill="#F78983" strokeWidth={0} />
+          <Area type="monotone" dataKey="over" stackId="1" stroke="#49ABA6" fill="#49ABA6" strokeWidth={0} />
         </AreaChart>
       </ResponsiveContainer>
     </div>
