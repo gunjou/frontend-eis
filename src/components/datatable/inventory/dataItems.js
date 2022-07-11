@@ -1,5 +1,5 @@
 export const itemColumns = [
-    { field: "id", headerName: "ID", width: 60 },
+    { field: "id", headerName: "ID", width: 60, },
     { field: "itemName", headerName: "Item Name", width: 400, editable: true, },
     { field: "itemType", headerName: "Item Type", width: 120, editable: true, },
     { field: "unitType", headerName: "Unit Type", width: 120, editable: true, },
