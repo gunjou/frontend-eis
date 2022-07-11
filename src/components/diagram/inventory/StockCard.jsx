@@ -1,6 +1,6 @@
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+// import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 
 const StockCard = ({ type }) => {
@@ -51,7 +51,7 @@ const StockCard = ({ type }) => {
           <>
             {data.percent >= 0 ? (
               <>
-                {data.title == "Optimal" ? (
+                {data.title === "Optimal" ? (
                   <span className="text-xs float-right text-green-600">
                     <ArrowDropUpIcon />
                     {Number(Math.abs(data.percent).toFixed(1))}%
@@ -65,7 +65,7 @@ const StockCard = ({ type }) => {
               </>
             ) : (
               <>
-                {data.title == "Optimal" ? (
+                {data.title === "Optimal" ? (
                   <span className="text-xs float-right text-red-600">
                     <ArrowDropDownIcon />
                     {Number(Math.abs(data.percent).toFixed(1))}%

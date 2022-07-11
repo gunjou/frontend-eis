@@ -1,22 +1,10 @@
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, } from "recharts";
 import { dataStatusStock } from "components/datatable/inventory/dataStatusStock";
+import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 var formatter = new Intl.NumberFormat("id-ID", {
   style: "currency",
   currency: "IDR",
 });
-
-const DataFormater = (number) => {
-  if (number > 1000000000) {
-    return (number / 1000000000).toString() + "B";
-  } else if (number > 1000000) {
-    return (number / 1000000).toString() + "M";
-  } else if (number > 1000) {
-    return (number / 1000).toString() + "K";
-  } else {
-    return number.toString();
-  }
-};
 
 const toPercent = (decimal) => `${(decimal * 100).toFixed(1)}%`;
 

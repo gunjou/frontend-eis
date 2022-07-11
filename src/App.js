@@ -1,10 +1,10 @@
 import "./App.css";
 import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ListRS from "pages/ListRS";
 import Contents from "./components/Contents";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
             <Route path='/hr' element={<Contents type="human-resource" />} />
             <Route path='/login' element={<SignIn />} />
             <Route path='/sign-up' element={<SignUp />} />
+            <Route path='/list-rs' element={<ListRS />} />
           </Route>
         </Routes>
       </BrowserRouter>

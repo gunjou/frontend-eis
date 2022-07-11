@@ -30,8 +30,14 @@ const CustomTooltip = ({ active, payload, label }) => {
 			status = "Overstock";
 			fill = '#F78983'
 		} else {
-			status = "Optimal";
-			fill = '#7AAB6C'
+      if (payload[2].value == null) {
+        status = "";
+        fill = '#000000'
+      }
+      else {
+        status = "Optimal";
+        fill = '#7AAB6C'
+      }
 		}
     return (
       <div className="custom-tooltip text-left bg-gray-100/90 border p-3 pb-3">
