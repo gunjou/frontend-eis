@@ -17,13 +17,13 @@ var formatter = new Intl.NumberFormat("id-ID", {
 
 function GetStatus(proops) {
   if (proops === 'understock') {
-    return(<div className=" text-center rounded bg-[#A6AB00]">understock</div>)
+    return(<div className=" text-center rounded text-white bg-[#A6AB00]">understock</div>)
     // fill = '#A6AB00'
   } else if (proops === 'overstock') {
-    return(<div className=" text-center rounded bg-[#F78983]">overstock</div>)
+    return(<div className=" text-center rounded text-white bg-[#F78983]">overstock</div>)
     // fill = '#F78983'
   } else {
-    return(<div className=" text-center rounded bg-[#7AAB6C]">optimal</div>)
+    return(<div className=" text-center rounded text-white bg-[#7AAB6C]">optimal</div>)
   }
 }
 
